@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ex11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Triangulo t = new Triangulo();
+
+            Console.WriteLine("Digite o valor do lado A: ");
+            t.setLadoA(double.Parse(Console.ReadLine()));
+
+            Console.WriteLine("Digite o valor do lado B: ");
+            t.setLadoB(double.Parse(Console.ReadLine()));
+
+            Console.WriteLine("Digite o valor do lado C: ");
+            t.setLadoC(double.Parse(Console.ReadLine()));
+
+
+            if (t.ehTriangulo())
+            {
+                Console.WriteLine("É um triângulo!");
+                Console.WriteLine("Classificação: " + t.classificaTriangulo());
+            }
+            else
+            {
+                Console.WriteLine("Os valores digitados NÃO formam um triângulo.");
+            }
+        }
+    }
+    }
+
